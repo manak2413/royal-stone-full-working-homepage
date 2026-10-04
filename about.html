@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | MK Marble & Stone</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #22211e;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: auto;
+        }
+
+        .serif {
+            font-family: "Playfair Display", serif;
+        }
+
+        .small-title {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a27a3d;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            line-height: 1.15;
+            font-weight: 500;
+        }
+
+        .gold-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            background: #a77b3d;
+            color: #fff;
+            padding: 15px 22px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: .3s;
+        }
+
+        .gold-btn:hover {
+            background: #80602f;
+            transform: translateY(-2px);
+        }
+
+        .gold-btn span {
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           HEADER
+           SAME AS INDEX.HTML MASTER HEADER
+        ===================================================== */
+
+        header {
+            height: 72px;
+            background: rgba(255, 255, 255, .98);
+            border-bottom: 1px solid #e9e6df;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .navbar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .logo-mark {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            letter-spacing: -4px;
+        }
+
+        .logo-text {
+            border-left: 1px solid #bbb;
+            padding-left: 10px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            line-height: 1.1;
+        }
+
+        .logo-text strong {
+            font-size: 9px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            font-size: 12px;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            height: 1px;
+            width: 0;
+            background: #a77b3d;
+            transition: .3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            background: #a77b3d;
+            color: #fff;
+            padding: 12px 18px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .nav-btn::after {
+            display: none !important;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Active About Page */
+        .nav-links a.active {
+            color: #a77b3d;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           ABOUT HERO
+        ===================================================== */
+
+        .about-hero {
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.98) 0%,
+                    rgba(255,255,255,.94) 27%,
+                    rgba(255,255,255,.65) 46%,
+                    rgba(255,255,255,.05) 73%
+                ),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvhJpIyfN9mMFYZ6O9te67bdgWU3NS7WPfFAimIDeXnA&s=10");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-hero-inner {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-hero-content {
+            width: 55%;
+            padding: 55px 0;
+        }
+
+        .breadcrumb {
+            font-size: 10px;
+            color: #a27a3d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .about-hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 52px;
+            line-height: 1.08;
+            font-weight: 500;
+            margin-bottom: 22px;
+        }
+
+        .about-hero p {
+            max-width: 460px;
+            color: #4f4c47;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           OUR STORY
+        ===================================================== */
+
+        .story-section {
+            padding: 75px 0;
+            background: #fff;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: .78fr 1.22fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .story-content {
+            padding-left: 20px;
+        }
+
+        .story-content h2 {
+            max-width: 430px;
+            margin-bottom: 22px;
+        }
+
+        .story-content > p {
+            max-width: 480px;
+            color: #555;
+            font-size: 12px;
+            line-height: 1.85;
+            margin-bottom: 15px;
+        }
+
+        .story-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 7px 25px rgba(0,0,0,.08);
+        }
+
+        .story-image img {
+            height: 360px;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.025);
+        }
+
+
+        /* =====================================================
+           STORY STATS
+        ===================================================== */
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .stat-icon {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a77b3d;
+            border: 1px solid #c9a777;
+            border-radius: 50%;
+            font-size: 19px;
+        }
+
+        .stat strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #6e512d;
+        }
+
+        .stat span {
+            display: block;
+            color: #666;
+            font-size: 9px;
+            line-height: 1.35;
+        }
+
+
+        /* =====================================================
+           VALUES
+        ===================================================== */
+
+        .values-section {
+            padding: 65px 0 75px;
+            background: #f8f7f4;
+            text-align: center;
+        }
+
+        .values-heading {
+            margin-bottom: 32px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 13px;
+        }
+
+        .value-card {
+            background: #fff;
+            border: 1px solid #e9e5de;
+            border-radius: 7px;
+            min-height: 165px;
+            padding: 22px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.04);
+            transition: .3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,.08);
+        }
+
+        .value-icon {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #b98a4e;
+            border-radius: 50%;
+            color: #a77b3d;
+            font-size: 18px;
+        }
+
+        .value-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           JOURNEY
+        ===================================================== */
+
+        .journey-section {
+            padding: 70px 0 75px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .journey-heading {
+            margin-bottom: 42px;
+        }
+
+        .journey-track {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            position: relative;
+        }
+
+        .journey-track::before {
+            content: "";
+            position: absolute;
+            top: 36px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: #d9c6a9;
+        }
+
+        .journey-item {
+            position: relative;
+            z-index: 2;
+        }
+
+        .journey-circle {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 14px;
+            background: #fff;
+            border: 1px solid #ded0bb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a77b3d;
+            font-size: 22px;
+        }
+
+        .journey-arrow {
+            position: absolute;
+            right: -8px;
+            top: 24px;
+            color: #a77b3d;
+            font-size: 22px;
+            z-index: 5;
+        }
+
+        .journey-item:last-child .journey-arrow {
+            display: none;
+        }
+
+        .journey-year {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .journey-item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .journey-item p {
+            max-width: 130px;
+            margin: auto;
+            color: #777;
+            font-size: 9px;
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           TEAM
+        ===================================================== */
+
+        .team-section {
+            padding: 10px 0 70px;
+            background: #fff;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .team-image {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .team-image img {
+            height: 305px;
+            object-fit: cover;
+        }
+
+        .team-content .small-title {
+            margin-bottom: 13px;
+        }
+
+        .team-content h2 {
+            margin-bottom: 18px;
+        }
+
+        .team-content p {
+            max-width: 480px;
+            color: #555;
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 13px;
+        }
+
+        .team-content .gold-btn {
+            margin-top: 10px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .about-cta {
+            padding: 65px 0;
+            background:
+                linear-gradient(
+                    rgba(28,25,21,.72),
+                    rgba(28,25,21,.72)
+                ),
+                url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            text-align: center;
+            color: #fff;
+        }
+
+        .about-cta .small-title {
+            color: #d0a96e;
+        }
+
+        .about-cta h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .about-cta p {
+            color: #eee;
+            font-size: 12px;
+            max-width: 540px;
+            margin: 0 auto 25px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+           SAME AS INDEX.HTML MASTER FOOTER
+        ===================================================== */
+
+        footer {
+            background: #f2f1ee;
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(4, 1fr);
+            gap: 35px;
+        }
+
+        .footer-brand p {
+            color: #777;
+            max-width: 240px;
+            font-size: 10px;
+            line-height: 1.8;
+            margin-top: 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            margin-bottom: 17px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #777;
+            font-size: 10px;
+            margin: 9px 0;
+            transition: .2s;
+        }
+
+        .footer-col a:hover {
+            color: #a27a3d;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 34px;
+            height: 34px;
+            border: 1px solid #d5d1c8;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+
+        .social-icon svg {
+            width: 15px;
+            height: 15px;
+            fill: #555;
+        }
+
+        .social-icon:hover {
+            background: #a27a3d;
+            border-color: #a27a3d;
+        }
+
+        .social-icon:hover svg {
+            fill: #fff;
+        }
+
+        .newsletter-title {
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .newsletter-text {
+            color: #777;
+            font-size: 10px;
+            margin-top: 7px;
+        }
+
+        .newsletter {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter input {
+            width: 160px;
+            height: 39px;
+            border: 1px solid #d5d1c8;
+            padding: 0 10px;
+            outline: none;
+            background: #fff;
+            font-size: 10px;
+        }
+
+        .newsletter button {
+            width: 42px;
+            height: 39px;
+            border: 0;
+            background: #a27a3d;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #d8d4cc;
+            margin-top: 45px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:1050px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .about-hero h1 {
+                font-size: 45px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        @media(max-width:768px) {
+
+            header {
+                height: 65px;
+            }
+
+            .navbar {
+                position: relative;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: -4%;
+                right: -4%;
+                padding: 25px;
+                background: #fff;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                box-shadow: 0 10px 25px rgba(0,0,0,.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .about-hero {
+                min-height: 500px;
+                background:
+                    linear-gradient(
+                        rgba(255,255,255,.86),
+                        rgba(255,255,255,.62)
+                    ),
+                    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85");
+
+                background-position: center;
+            }
+
+            .about-hero-inner {
+                min-height: 500px;
+            }
+
+            .about-hero-content {
+                width: 100%;
+            }
+
+            .about-hero h1 {
+                font-size: 43px;
+            }
+
+            .story-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .story-content {
+                padding-left: 0;
+            }
+
+            .story-image {
+                order: -1;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .journey-track {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .journey-track::before {
+                display: none;
+            }
+
+            .journey-arrow {
+                display: none;
+            }
+
+            .team-section {
+                padding-top: 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media(max-width:500px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .about-hero h1 {
+                font-size: 37px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .story-image img {
+                height: 270px;
+            }
+
+            .stats {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-image img {
+                height: 250px;
+            }
+
+            .about-cta h2 {
+                font-size: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         MASTER INDEX HEADER
+    ===================================================== -->
+
+ <header>
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+
+                <div class="logo-mark">MK</div>
+
+                <div class="logo-text">
+                    MARBLE<br>
+                    <strong>& STONE</strong>
+                </div>
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./collections.html">Collections</a>
+                <a href="./product.html">Products</a>
+                <a href="./project.html">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <a href="#contact" class="nav-btn">
+                Inquire Now ↗
+            </a>
+
+            <div class="menu-btn" onclick="mobileMenu()">
+                ☰
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ABOUT HERO
+    ===================================================== -->
+
+    <section class="about-hero">
+
+        <div class="container about-hero-inner">
+
+            <div class="about-hero-content">
+
+                <div class="breadcrumb">
+                    HOME &nbsp;›&nbsp; ABOUT US
+                </div>
+
+                <h1>
+                    About MK Marble<br>
+                    & Natural Stone
+                </h1>
+
+                <p>
+                    Driven by passion. Defined by quality.<br>
+                    Delivering nature's finest creations since 2005.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR STORY
+    ===================================================== -->
+
+    <section class="story-section">
+
+        <div class="container story-grid">
+
+            <div class="story-content">
+
+                <div class="small-title">
+                    OUR STORY
+                </div>
+
+                <h2 class="section-title">
+                    A Legacy Built on<br>
+                    Trust & Excellence
+                </h2>
+
+                <p>
+                    MK Marble & Stone was established in 2005 with a vision
+                    to deliver premium quality marble and natural stone to
+                    architects, designers, builders and homeowners.
+                </p>
+
+                <p>
+                    With ethical sourcing, advanced processing and a deep
+                    commitment to quality, we have grown into a trusted
+                    name in the natural stone industry.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            ♧
+                        </div>
+
+                        <div>
+                            <strong>19+</strong>
+                            <span>Years of<br>Experience</span>
+                        </div>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            ◎
+                        </div>
+
+                        <div>
+                            <strong>25+</strong>
+                            <span>Countries<br>Serving</span>
+                        </div>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            ♙
+                        </div>
+
+                        <div>
+                            <strong>10,000+</strong>
+                            <span>Happy<br>Clients</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="story-image">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvhJpIyfN9mMFYZ6O9te67bdgWU3NS7WPfFAimIDeXnA&s=10"
+                    alt="Premium marble showroom">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR VALUES
+    ===================================================== -->
+
+    <section class="values-section">
+
+        <div class="container">
+
+            <div class="values-heading">
+
+                <div class="small-title">
+                    OUR VALUES
+                </div>
+
+                <h2 class="section-title">
+                    The Principles That Drive Us
+                </h2>
+
+            </div>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ♢
+                    </div>
+
+                    <h3>
+                        Quality First
+                    </h3>
+
+                    <p>
+                        We never compromise on quality —
+                        from selection to final delivery.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Integrity
+                    </h3>
+
+                    <p>
+                        Honest business practices and
+                        transparent relationships.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Sustainability
+                    </h3>
+
+                    <p>
+                        Responsible sourcing and care
+                        for the environment we all share.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ♧
+                    </div>
+
+                    <h3>
+                        Customer Focus
+                    </h3>
+
+                    <p>
+                        Our client's success is at the
+                        heart of everything we do.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ◆
+                    </div>
+
+                    <h3>
+                        Excellence
+                    </h3>
+
+                    <p>
+                        We strive for perfection in every
+                        slab and every service we provide.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR JOURNEY
+    ===================================================== -->
+
+    <section class="journey-section">
+
+        <div class="container">
+
+            <div class="journey-heading">
+
+                <div class="small-title">
+                    OUR JOURNEY
+                </div>
+
+                <h2 class="section-title">
+                    From a Small Beginning to a Global Presence
+                </h2>
+
+            </div>
+
+            <div class="journey-track">
+
+                <div class="journey-item">
+
+                    <div class="journey-circle">
+                        ▥
+                    </div>
+
+                    <div class="journey-arrow">
+                        →
+                    </div>
+
+                    <div class="journey-year">
+                        2005
+                    </div>
+
+                    <h3>
+                        Company Founded
+                    </h3>
+
+                    <p>
+                        Beginning with a vision for
+                        quality natural stone.
+                    </p>
+
+                </div>
+
+                <div class="journey-item">
+
+                    <div class="journey-circle">
+                        ♙
+                    </div>
+
+                    <div class="journey-arrow">
+                        →
+                    </div>
+
+                    <div class="journey-year">
+                        2010
+                    </div>
+
+                    <h3>
+                        Advanced Machinery
+                    </h3>
+
+                    <p>
+                        Modern processing
+                        capabilities added.
+                    </p>
+
+                </div>
+
+                <div class="journey-item">
+
+                    <div class="journey-circle">
+                        ◎
+                    </div>
+
+                    <div class="journey-arrow">
+                        →
+                    </div>
+
+                    <div class="journey-year">
+                        2015
+                    </div>
+
+                    <h3>
+                        Expanded to International Markets
+                    </h3>
+
+                    <p>
+                        Expanded into international
+                        markets.
+                    </p>
+
+                </div>
+
+                <div class="journey-item">
+
+                    <div class="journey-circle">
+                        ♧
+                    </div>
+
+                    <div class="journey-arrow">
+                        →
+                    </div>
+
+                    <div class="journey-year">
+                        2020
+                    </div>
+
+                    <h3>
+                        10,000+ Satisfied Clients
+                    </h3>
+
+                    <p>
+                        Reached thousands of
+                        satisfied clients.
+                    </p>
+
+                </div>
+
+                <div class="journey-item">
+
+                    <div class="journey-circle">
+                        ◉
+                    </div>
+
+                    <div class="journey-year">
+                        2024+
+                    </div>
+
+                    <h3>
+                        Journey of Excellence
+                    </h3>
+
+                    <p>
+                        Continuing our journey
+                        of excellence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR TEAM
+    ===================================================== -->
+
+    <section class="team-section">
+
+        <div class="container team-grid">
+
+            <div class="team-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=90"
+                    alt="MK Marble team">
+
+            </div>
+
+            <div class="team-content">
+
+                <div class="small-title">
+                    OUR TEAM
+                </div>
+
+                <h2 class="section-title">
+                    Experience. Expertise. Passion.
+                </h2>
+
+                <p>
+                    Our experienced team brings together deep
+                    industry knowledge, technical expertise and
+                    a passion for natural stone.
+                </p>
+
+                <p>
+                    We work closely with our clients to understand
+                    their vision and deliver the perfect stone
+                    solutions for every project.
+                </p>
+
+                <a href="contact.html" class="gold-btn">
+                    Meet Our Team
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="about-cta">
+
+        <div class="container">
+
+            <div class="small-title">
+                LET'S CREATE SOMETHING TIMELESS
+            </div>
+
+            <h2>
+                Your Vision. Our Stone.
+            </h2>
+
+            <p>
+                From concept to completion, discover premium
+                marble and natural stone solutions for your
+                next project.
+            </p>
+
+            <a href="contact.html" class="gold-btn">
+                Start Your Project
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         MASTER INDEX FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <div class="logo">
+
+                        <div class="logo-mark">
+                            MK
+                        </div>
+
+                        <div class="logo-text">
+                            MARBLE<br>
+                            <strong>& STONE</strong>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Importers, Exporters & Wholesalers of
+                        Premium Marble & Natural Stone.
+                        Delivering timeless beauty since 2005.
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#" class="social-icon" aria-label="Facebook">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1z" />
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#" class="social-icon" aria-label="Instagram">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 8h4v13H3V8zm7 0h4v2c.6-1.1 1.8-2.4 4.2-2.4 4 0 4.8 2.6 4.8 6v7.4h-4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V21h-4V8z" />
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#" class="social-icon" aria-label="YouTube">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M23 7.1s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.3 3.5 12 3.5 12 3.5h-.1s-4.3 0-7.7.3c-.5.1-1.5.1-2.4 1C1.1 5.5 1 7.1 1 7.1S.7 9 .7 10.8v1.7c0 1.8.3 3.7.3 3.7s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 7.5.3 7.5.3s4.3 0 7.7-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.7v-1.7c0-1.8-.3-3.7-.3-3.7zM9.6 15.1V8.4l6.2 3.4-6.2 3.3-6.2 3.3z" />
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>COMPANY</h4>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="#">
+                        Our Process
+                    </a>
+
+                    <a href="#">
+                        Quality Assurance
+                    </a>
+
+                    <a href="#">
+                        Sustainability
+                    </a>
+
+                    <a href="#">
+                        Careers
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>COLLECTIONS</h4>
+
+                    <a href="collections.html">
+                        Marble
+                    </a>
+
+                    <a href="collections.html">
+                        Granite
+                    </a>
+
+                    <a href="collections.html">
+                        Onyx
+                    </a>
+
+                    <a href="collections.html">
+                        Travertine
+                    </a>
+
+                    <a href="collections.html">
+                        Quartzite
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>RESOURCES</h4>
+
+                    <a href="products.html">
+                        Products
+                    </a>
+
+                    <a href="projects.html">
+                        Projects
+                    </a>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                    <a href="#">
+                        Catalog
+                    </a>
+
+                    <a href="#">
+                        Care & Maintenance
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>SUPPORT</h4>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                    <a href="#">
+                        Shipping & Delivery
+                    </a>
+
+                    <a href="#">
+                        Returns Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 MK Marble & Stone. All Rights Reserved.
+                </span>
+
+                <span>
+                    Made with precision. Inspired by nature. ◆
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        function mobileMenu() {
+
+            const nav = document.querySelector(".nav-links");
+
+            if (nav.style.display === "flex") {
+
+                nav.style.display = "";
+
+            } else {
+
+                nav.style.display = "flex";
+                nav.style.position = "absolute";
+                nav.style.top = "65px";
+                nav.style.left = "0";
+                nav.style.right = "0";
+                nav.style.padding = "25px";
+                nav.style.background = "#fff";
+                nav.style.flexDirection = "column";
+                nav.style.alignItems = "flex-start";
+                nav.style.gap = "20px";
+                nav.style.boxShadow = "0 10px 25px rgba(0,0,0,.08)";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           HEADER SHADOW
+        ===================================================== */
+
+        window.addEventListener("scroll", function () {
+
+            const header = document.querySelector("header");
+
+            if (window.scrollY > 20) {
+
+                header.style.boxShadow =
+                    "0 5px 25px rgba(0,0,0,.07)";
+
+            } else {
+
+                header.style.boxShadow = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
