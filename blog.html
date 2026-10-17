@@ -1028,8 +1028,45 @@
                 display: none;
             }
 
+            /* Working mobile navigation */
+            .navbar {
+                position: relative;
+            }
+
+            .nav-links.active {
+                display: flex;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 4%;
+                background: #fff;
+                border-top: 1px solid #e9e6df;
+                box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+                z-index: 1001;
+            }
+
+            .nav-links.active a {
+                display: block;
+                padding: 14px 4px;
+                border-bottom: 1px solid #eee9e1;
+                font-size: 13px;
+            }
+
+            .nav-links.active a:last-child {
+                border-bottom: 0;
+            }
+
+            .nav-links.active a::after {
+                display: none;
+            }
+
             .menu-btn {
                 display: block;
+                user-select: none;
             }
 
             .hero {
@@ -1139,10 +1176,10 @@
 ===================================================== */
 .blog-page{background:#fff}
 .blog-hero{position:relative;min-height:500px;display:flex;align-items:center;overflow:hidden;background:#f4f1eb}
-.blog-hero-bg{position:absolute;inset:0 0 0 42%;background:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat}
+.blog-hero-bg{position:absolute;inset:0 0 0 42%;background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_y4MVCU-zccDdM00lHArTzpzh5K8hb5YTu3UIUpTUog&s=10') center/cover no-repeat}
 .blog-hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f4f1eb 0%,rgba(244,241,235,.97) 15%,rgba(244,241,235,.55) 48%,rgba(244,241,235,.04) 100%)}
 .blog-hero .container{position:relative;z-index:2;width:100%}
-.blog-hero-content{width:58%;padding:90px 0}
+.blog-hero-content{width:58%;padding:90px 50px;}
 .blog-hero h1{font-family:'Playfair Display',serif;font-size:58px;line-height:1.08;font-weight:500;max-width:680px;margin:14px 0 20px}
 .blog-hero p{max-width:560px;color:#666;font-size:13px;line-height:1.9;margin-bottom:28px}
 .blog-meta{display:flex;gap:28px;margin-top:35px;flex-wrap:wrap}
@@ -1238,7 +1275,7 @@
                 Inquire Now ↗
             </a>
 
-            <div class="menu-btn" onclick="mobileMenu()">
+            <div class="menu-btn" onclick="mobileMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();mobileMenu();}">
                 ☰
             </div>
 
@@ -1288,7 +1325,7 @@
   <article class="blog-featured">
     <div class="blog-featured-image"><img src="https://static.vecteezy.com/system/resources/thumbnails/049/341/601/small/light-blue-gray-and-white-flat-marble-pattern-smooth-marble-wallpaper-photo.jpeg" alt="Luxury marble interior"></div>
     <div class="blog-featured-copy">
-      <div class="blog-tag">FEATURED • DESIGN</div>
+      <div class="blog-tag">FEATURED •DESIGN</div>
       <h3>How Natural Stone Transforms Contemporary Luxury Interiors</h3>
       <p>From dramatic bookmatched walls to quiet marble surfaces, discover how carefully selected natural stone can shape the atmosphere, character and value of a space.</p>
       <a class="blog-read" href="#">Read Full Story →</a>
@@ -1520,6 +1557,31 @@
     </footer>
 
 <script>
+/* Mobile menu: open/close navigation and close it after choosing a page. */
+function mobileMenu() {
+    const menu = document.querySelector('.nav-links');
+    const button = document.querySelector('.menu-btn');
+    if (!menu || !button) return;
+
+    const isOpen = menu.classList.toggle('active');
+    button.textContent = isOpen ? '✕' : '☰';
+    button.setAttribute('aria-expanded', String(isOpen));
+    button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+}
+
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        const menu = document.querySelector('.nav-links');
+        const button = document.querySelector('.menu-btn');
+        if (menu) menu.classList.remove('active');
+        if (button) {
+            button.textContent = '☰';
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', 'Open menu');
+        }
+    });
+});
+
 (function(){
   const buttons=document.querySelectorAll('.blog-filter');
   const cards=document.querySelectorAll('.blog-card');
