@@ -1586,7 +1586,7 @@
                             </select></div>
                         <div class="contact-field full"><label>Project Details</label><textarea
                                 placeholder="Tell us about your project, quantity, finish, size or any other requirement..."></textarea>
-                        </div><button class="gold-btn contact-submit" type="submit">Send Inquiry <span>↗</span></button>
+                        </div><button class="gold-btn contact-submit" type="submit">Send Inquiry<span>↗</span></button>
                         <div class="form-status" id="formStatus">Thank you. Your inquiry has been received. We will
                             contact you shortly.</div>
                     </form>
@@ -1919,6 +1919,39 @@
     </script>
 
     <script>document.addEventListener("DOMContentLoaded", function () { const f = document.getElementById("contactForm"), s = document.getElementById("formStatus"); if (f && s) f.addEventListener("submit", function (e) { e.preventDefault(); s.classList.add("show"); f.reset(); }); });</script>
+
+    
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const fields = this.querySelectorAll("input");
+    const name = fields[0].value.trim();
+    const phone = fields[1].value.trim();
+    const email = fields[2].value.trim();
+
+    const stone = this.querySelector("select").value;
+    const details = this.querySelector("textarea").value.trim();
+
+    // Apna WhatsApp number country code ke saath likho
+    const whatsappNumber = "8209372135";
+
+    const message =
+`New Marble Inquiry
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Stone Required: ${stone}
+Project Details: ${details}`;
+
+    const whatsappURL =
+        "https://wa.me/" + 8209372135 +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
 </body>
 
 </html>
